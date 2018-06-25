@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {BroadcastService, MsalService} from "ms-msal-angular";
 import {ProductService} from "./product.service";
 import {Subscription} from "rxjs/Subscription";
-import {MsalConfig} from "../../../../src/msal-config";
+
 
 @Component({
   selector: 'app-root',
