@@ -1,0 +1,42 @@
+[0606/151018.659:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0606/151018.659:ERROR:exception_snapshot_win.cc(88)] thread ID 24948 not found in process
+[0606/151018.659:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0606/151235.583:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0606/151235.583:ERROR:exception_snapshot_win.cc(88)] thread ID 24800 not found in process
+[0606/151235.583:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0606/151544.484:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0606/151544.484:ERROR:exception_snapshot_win.cc(88)] thread ID 19808 not found in process
+[0606/151544.484:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0606/151628.018:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0606/151628.018:ERROR:exception_snapshot_win.cc(88)] thread ID 22848 not found in process
+[0606/151628.018:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0607/102210.921:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0607/102210.921:ERROR:exception_snapshot_win.cc(88)] thread ID 19012 not found in process
+[0607/102210.921:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0607/172405.981:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0607/172405.981:ERROR:exception_snapshot_win.cc(88)] thread ID 22704 not found in process
+[0607/172405.981:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0607/174138.558:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0607/174138.558:ERROR:exception_snapshot_win.cc(88)] thread ID 26272 not found in process
+[0607/174138.558:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0607/174335.715:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0607/174335.715:ERROR:exception_snapshot_win.cc(88)] thread ID 20280 not found in process
+[0607/174335.715:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0607/174807.686:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0607/174807.686:ERROR:exception_snapshot_win.cc(88)] thread ID 2856 not found in process
+[0607/174807.686:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0607/175926.271:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0607/175926.271:ERROR:exception_snapshot_win.cc(88)] thread ID 24764 not found in process
+[0607/175926.271:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0609/211644.012:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0609/211644.013:ERROR:exception_snapshot_win.cc(88)] thread ID 27956 not found in process
+[0609/211644.013:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0609/211644.018:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0609/211644.019:ERROR:exception_snapshot_win.cc(88)] thread ID 19988 not found in process
+[0609/211644.019:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0610/231427.216:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0610/231427.216:ERROR:exception_snapshot_win.cc(88)] thread ID 15500 not found in process
+[0610/231427.216:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0610/231524.635:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0610/231524.636:ERROR:exception_snapshot_win.cc(88)] thread ID 23332 not found in process
+[0610/231524.636:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
