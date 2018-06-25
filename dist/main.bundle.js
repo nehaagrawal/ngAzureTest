@@ -22,7 +22,7 @@ webpackEmptyAsyncContext.id = "./src/$$_gendir lazy recursive";
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Product; });
-var Product = (function () {
+var Product = /** @class */ (function () {
     function Product(productID, name, price) {
         this.productID = productID;
         this.name = name;
@@ -69,7 +69,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AppComponent = (function () {
+var AppComponent = /** @class */ (function () {
     function AppComponent(broadcastService, authService, productService) {
         this.broadcastService = broadcastService;
         this.authService = authService;
@@ -113,18 +113,18 @@ var AppComponent = (function () {
             this.subscription.unsubscribe();
         }
     };
+    var _a, _b, _c;
+    AppComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-root',
+            template: __webpack_require__("./src/app/app.component.html"),
+            styles: [__webpack_require__("./src/app/app.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["a" /* BroadcastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["a" /* BroadcastService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__product_service__["a" /* ProductService */]) === "function" && _c || Object])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-root',
-        template: __webpack_require__("./src/app/app.component.html"),
-        styles: [__webpack_require__("./src/app/app.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["a" /* BroadcastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["a" /* BroadcastService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__product_service__["a" /* ProductService */]) === "function" && _c || Object])
-], AppComponent);
 
-var _a, _b, _c;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/app.component.js.map
 
 /***/ }),
@@ -196,48 +196,48 @@ var endDate = new Date();
 endDate.setDate(startDate.getDate() + 7);
 protectedResourceMap.set("https://graph.microsoft.com/beta/me/calendarview?startdatetime=" + startDate.toLocaleDateString("en-US") + "&enddatetime=" + endDate.toLocaleDateString("en-US") + "&$select=subject,start,end&$orderBy=start/dateTime", ["calendars.read"]);
 protectedResourceMap.set("https://buildtodoservice.azurewebsites.net/api/todolist", ["api://a88bb933-319c-41b5-9f04-eff36d985612/access_as_user"]);
-var AppModule = (function () {
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_6__home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_7__product_component__["a" /* ProductComponent */], __WEBPACK_IMPORTED_MODULE_8__error_component__["a" /* ErrorComponent */], __WEBPACK_IMPORTED_MODULE_9__product_detail_component__["a" /* ProductDetailComponent */], __WEBPACK_IMPORTED_MODULE_12__msGraph_component__["a" /* MsGraphComponent */], __WEBPACK_IMPORTED_MODULE_16__todo_list_todo_list_component__["a" /* TodoListComponent */], __WEBPACK_IMPORTED_MODULE_19__user_data_user_data_component__["a" /* UserDataComponent */], __WEBPACK_IMPORTED_MODULE_20__config_config_component__["a" /* ConfigComponent */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["c" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_11__app_routes__["a" /* appRoutes */]),
+                __WEBPACK_IMPORTED_MODULE_14_ms_msal_angular__["d" /* MsalModule */].forRoot({
+                    // clientID: 'f3e5cf63-6c0d-42cb-b5aa-ee58b1ef7523',
+                    clientID: '6226576d-37e9-49eb-b201-ec1eeb0029b6',
+                    authority: "https://login.microsoftonline.com/neagrawa.onmicrosoft.com/",
+                    validateAuthority: true,
+                    redirectUri: "http://localhost:4200/",
+                    cacheLocation: "localStorage",
+                    postLogoutRedirectUri: "http://localhost:4200/",
+                    navigateToLoginRequestUrl: true,
+                    popUp: false,
+                    // consentScopes: [ "calendars.read", "api://a88bb933-319c-41b5-9f04-eff36d985612/access_as_user"],
+                    //  consentScopes: [ "calendars.read"],
+                    unprotectedResources: ["https:google.com"],
+                    protectedResourceMap: protectedResourceMap,
+                    logger: loggerCallback,
+                    correlationId: '1234',
+                    level: __WEBPACK_IMPORTED_MODULE_15_msal__["LogLevel"].Info,
+                    piiLoggingEnabled: true
+                }),
+            ],
+            providers: [__WEBPACK_IMPORTED_MODULE_10__product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_17__todo_list_todo_list_service__["a" /* TodoListService */], __WEBPACK_IMPORTED_MODULE_18__msGraph_service__["a" /* MsGraphService */],
+                { provide: __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["a" /* HTTP_INTERCEPTORS */], useClass: __WEBPACK_IMPORTED_MODULE_14_ms_msal_angular__["c" /* MsalInterceptor */], multi: true }
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_6__home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_7__product_component__["a" /* ProductComponent */], __WEBPACK_IMPORTED_MODULE_8__error_component__["a" /* ErrorComponent */], __WEBPACK_IMPORTED_MODULE_9__product_detail_component__["a" /* ProductDetailComponent */], __WEBPACK_IMPORTED_MODULE_12__msGraph_component__["a" /* MsGraphComponent */], __WEBPACK_IMPORTED_MODULE_16__todo_list_todo_list_component__["a" /* TodoListComponent */], __WEBPACK_IMPORTED_MODULE_19__user_data_user_data_component__["a" /* UserDataComponent */], __WEBPACK_IMPORTED_MODULE_20__config_config_component__["a" /* ConfigComponent */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["c" /* HttpClientModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_11__app_routes__["a" /* appRoutes */]),
-            __WEBPACK_IMPORTED_MODULE_14_ms_msal_angular__["d" /* MsalModule */].forRoot({
-                // clientID: 'f3e5cf63-6c0d-42cb-b5aa-ee58b1ef7523',
-                clientID: '6226576d-37e9-49eb-b201-ec1eeb0029b6',
-                authority: "https://login.microsoftonline.com/neagrawa.onmicrosoft.com/",
-                validateAuthority: true,
-                redirectUri: "http://localhost:4200/",
-                cacheLocation: "localStorage",
-                postLogoutRedirectUri: "http://localhost:4200/",
-                navigateToLoginRequestUrl: true,
-                popUp: false,
-                // consentScopes: [ "calendars.read", "api://a88bb933-319c-41b5-9f04-eff36d985612/access_as_user"],
-                //  consentScopes: [ "calendars.read"],
-                unprotectedResources: ["https:google.com"],
-                protectedResourceMap: protectedResourceMap,
-                logger: loggerCallback,
-                correlationId: '1234',
-                level: __WEBPACK_IMPORTED_MODULE_15_msal__["LogLevel"].Info,
-                piiLoggingEnabled: true
-            }),
-        ],
-        providers: [__WEBPACK_IMPORTED_MODULE_10__product_service__["a" /* ProductService */], __WEBPACK_IMPORTED_MODULE_17__todo_list_todo_list_service__["a" /* TodoListService */], __WEBPACK_IMPORTED_MODULE_18__msGraph_service__["a" /* MsGraphService */],
-            { provide: __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["a" /* HTTP_INTERCEPTORS */], useClass: __WEBPACK_IMPORTED_MODULE_14_ms_msal_angular__["c" /* MsalInterceptor */], multi: true }
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
-    })
-], AppModule);
 
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/app.module.js.map
 
@@ -314,21 +314,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var ConfigComponent = (function () {
+var ConfigComponent = /** @class */ (function () {
     function ConfigComponent() {
     }
     ConfigComponent.prototype.ngOnInit = function () {
     };
+    ConfigComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-config',
+            template: __webpack_require__("./src/app/config/config.component.html"),
+            styles: [__webpack_require__("./src/app/config/config.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ConfigComponent);
     return ConfigComponent;
 }());
-ConfigComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-config',
-        template: __webpack_require__("./src/app/config/config.component.html"),
-        styles: [__webpack_require__("./src/app/config/config.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], ConfigComponent);
 
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/config.component.js.map
 
@@ -347,16 +347,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ErrorComponent = (function () {
+var ErrorComponent = /** @class */ (function () {
     function ErrorComponent() {
     }
+    ErrorComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: "<h1>Page not found</h1>\n               <p>This is a Error Page</p>\n              "
+        })
+    ], ErrorComponent);
     return ErrorComponent;
 }());
-ErrorComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: "<h1>Page not found</h1>\n               <p>This is a Error Page</p>\n              "
-    })
-], ErrorComponent);
 
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/error.component.js.map
 
@@ -378,19 +378,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var HomeComponent = (function () {
+var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
+    HomeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: "\n    <p>This sample demonstrates how to take advantage of MSAL Angular for adding Azure AD authentication to your Angular apps.</p>\n    <input type=\"text\"  id=\"homePageTextBox\">\n    "
+        }),
+        __metadata("design:paramtypes", [])
+    ], HomeComponent);
     return HomeComponent;
 }());
-HomeComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: "\n    <p>This sample demonstrates how to take advantage of MSAL Angular for adding Azure AD authentication to your Angular apps.</p>\n    <input type=\"text\"  id=\"homePageTextBox\">\n    "
-    }),
-    __metadata("design:paramtypes", [])
-], HomeComponent);
 
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/home.component.js.map
 
@@ -423,7 +423,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MsGraphComponent = (function () {
+var MsGraphComponent = /** @class */ (function () {
     function MsGraphComponent(authService, msGraphService, broadcastService) {
         this.authService = authService;
         this.msGraphService = msGraphService;
@@ -494,16 +494,16 @@ var MsGraphComponent = (function () {
             this.subscription.unsubscribe();
         }
     };
+    var _a, _b, _c;
+    MsGraphComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("./src/app/msGraph.component.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__msGraph_service__["a" /* MsGraphService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__msGraph_service__["a" /* MsGraphService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["a" /* BroadcastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["a" /* BroadcastService */]) === "function" && _c || Object])
+    ], MsGraphComponent);
     return MsGraphComponent;
 }());
-MsGraphComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: __webpack_require__("./src/app/msGraph.component.html"),
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__msGraph_service__["a" /* MsGraphService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__msGraph_service__["a" /* MsGraphService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["a" /* BroadcastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["a" /* BroadcastService */]) === "function" && _c || Object])
-], MsGraphComponent);
 
-var _a, _b, _c;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/msGraph.component.js.map
 
 /***/ }),
@@ -529,7 +529,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MsGraphService = (function () {
+var MsGraphService = /** @class */ (function () {
     function MsGraphService(http) {
         this.http = http;
         this.startDate = new Date();
@@ -546,14 +546,14 @@ var MsGraphService = (function () {
         })
             .catch(function (response) { return (__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__["Observable"].throw(response)); });
     };
+    var _a;
+    MsGraphService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+    ], MsGraphService);
     return MsGraphService;
 }());
-MsGraphService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
-], MsGraphService);
 
-var _a;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/msGraph.service.js.map
 
 /***/ }),
@@ -585,7 +585,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ProductDetailComponent = (function () {
+var ProductDetailComponent = /** @class */ (function () {
     function ProductDetailComponent(_Activatedroute, _router, _productService) {
         this._Activatedroute = _Activatedroute;
         this._router = _router;
@@ -605,16 +605,16 @@ var ProductDetailComponent = (function () {
     ProductDetailComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
     };
+    var _a, _b, _c;
+    ProductDetailComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("./src/app/product-detail.component.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__product_service__["a" /* ProductService */]) === "function" && _c || Object])
+    ], ProductDetailComponent);
     return ProductDetailComponent;
 }());
-ProductDetailComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: __webpack_require__("./src/app/product-detail.component.html"),
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__product_service__["a" /* ProductService */]) === "function" && _c || Object])
-], ProductDetailComponent);
 
-var _a, _b, _c;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/product-detail.component.js.map
 
 /***/ }),
@@ -646,7 +646,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ProductComponent = (function () {
+var ProductComponent = /** @class */ (function () {
     function ProductComponent(productService, broadcastService, authService) {
         this.productService = productService;
         this.broadcastService = broadcastService;
@@ -659,16 +659,16 @@ var ProductComponent = (function () {
         this.broadcastService.subscribe("msal:acquireTokenFailure", function (payload) {
         });
     };
+    var _a, _b, _c;
+    ProductComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("./src/app/product.component.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["a" /* BroadcastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["a" /* BroadcastService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["e" /* MsalService */]) === "function" && _c || Object])
+    ], ProductComponent);
     return ProductComponent;
 }());
-ProductComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: __webpack_require__("./src/app/product.component.html"),
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__product_service__["a" /* ProductService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__product_service__["a" /* ProductService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["a" /* BroadcastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["a" /* BroadcastService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["e" /* MsalService */]) === "function" && _c || Object])
-], ProductComponent);
 
-var _a, _b, _c;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/product.component.js.map
 
 /***/ }),
@@ -693,7 +693,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ProductService = (function () {
+var ProductService = /** @class */ (function () {
     function ProductService(http) {
         this.http = http;
     }
@@ -710,14 +710,14 @@ var ProductService = (function () {
         var products = this.getProducts();
         return products.find(function (p) { return p.productID == id; });
     };
+    var _a;
+    ProductService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+    ], ProductService);
     return ProductService;
 }());
-ProductService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
-], ProductService);
 
-var _a;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/product.service.js.map
 
 /***/ }),
@@ -756,7 +756,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var TodoListComponent = (function () {
+var TodoListComponent = /** @class */ (function () {
     function TodoListComponent(todoListService, broadcastService, msalService) {
         this.todoListService = todoListService;
         this.broadcastService = broadcastService;
@@ -826,18 +826,18 @@ var TodoListComponent = (function () {
             this.subscription.unsubscribe();
         }
     };
+    var _a, _b, _c;
+    TodoListComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-todo-list',
+            template: __webpack_require__("./src/app/todo-list/todo-list.component.html"),
+            styles: [__webpack_require__("./src/app/todo-list/todo-list.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__todo_list_service__["a" /* TodoListService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__todo_list_service__["a" /* TodoListService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["a" /* BroadcastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["a" /* BroadcastService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["e" /* MsalService */]) === "function" && _c || Object])
+    ], TodoListComponent);
     return TodoListComponent;
 }());
-TodoListComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-todo-list',
-        template: __webpack_require__("./src/app/todo-list/todo-list.component.html"),
-        styles: [__webpack_require__("./src/app/todo-list/todo-list.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__todo_list_service__["a" /* TodoListService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__todo_list_service__["a" /* TodoListService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["a" /* BroadcastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["a" /* BroadcastService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["e" /* MsalService */]) === "function" && _c || Object])
-], TodoListComponent);
 
-var _a, _b, _c;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/todo-list.component.js.map
 
 /***/ }),
@@ -863,7 +863,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var TodoListService = (function () {
+var TodoListService = /** @class */ (function () {
     function TodoListService(http) {
         this.http = http;
         this.apiEndpoint = "https://buildtodoservice.azurewebsites.net/api/todolist";
@@ -881,14 +881,14 @@ var TodoListService = (function () {
             return response;
         });
     };
+    var _a;
+    TodoListService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+    ], TodoListService);
     return TodoListService;
 }());
-TodoListService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
-], TodoListService);
 
-var _a;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/todo-list.service.js.map
 
 /***/ }),
@@ -925,7 +925,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var UserDataComponent = (function () {
+var UserDataComponent = /** @class */ (function () {
     function UserDataComponent(authService) {
         this.authService = authService;
     }
@@ -934,18 +934,18 @@ var UserDataComponent = (function () {
         //test.replace(/\"/g, "")
         console.log(this.userData);
     };
+    var _a;
+    UserDataComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-user-data',
+            template: __webpack_require__("./src/app/user-data/user-data.component.html"),
+            styles: [__webpack_require__("./src/app/user-data/user-data.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */]) === "function" && _a || Object])
+    ], UserDataComponent);
     return UserDataComponent;
 }());
-UserDataComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-user-data',
-        template: __webpack_require__("./src/app/user-data/user-data.component.html"),
-        styles: [__webpack_require__("./src/app/user-data/user-data.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ms_msal_angular__["e" /* MsalService */]) === "function" && _a || Object])
-], UserDataComponent);
 
-var _a;
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/user-data.component.js.map
 
 /***/ }),
@@ -959,7 +959,6 @@ var _a;
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
