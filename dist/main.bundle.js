@@ -45,7 +45,7 @@ module.exports = "a.disabled {\r\n  color: gray;\r\n  cursor: not-allowed;\r\n  
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <nav class=\"navbar navbar-inverse\">\r\n    <div class=\"container-fluid\">\r\n      <div class=\"navbar-header\">\r\n        <a class=\"navbar-brand\" href=\"#\">MSAL Angular Demo</a>\r\n      </div>\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a [routerLink]=\"['home']\">Home</a></li>\r\n        <li><a [routerLink]=\"['product']\">Product</a></li>\r\n        <li><a [routerLink]=\"['myCalendar']\">Calendar</a></li>\r\n        <li><a  [routerLink]=\"['todoList']\">Web API Call</a></li>\r\n        <li><a [routerLink]=\"['userData']\">User Data</a></li>\r\n        <li><a [routerLink]=\"['config']\">config settings</a></li>\r\n\r\n      </ul>\r\n      <ul class=\"nav navbar-nav navbar-right\">\r\n        <li><a  *ngIf=\"!loggedIn\"  id=\"loginRedirectButton\"  (click)=\"login()\"><span class=\"glyphicon glyphicon-log-in\"></span> Login Redirect</a></li>\r\n        <li><a id=\"logoutButton\"  *ngIf=\"loggedIn\" (click)=\"logout()\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a></li>\r\n        <li><a  *ngIf=\"!loggedIn\"  id=\"loginPopupButton\"  (click)=\"loginPopup()\"><span class=\"glyphicon glyphicon-log-in\"></span> Login Popup</a></li>\r\n\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n<router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n  <nav class=\"navbar navbar-inverse\">\r\n    <div class=\"container-fluid\">\r\n      <div class=\"navbar-header\">\r\n        <a class=\"navbar-brand\" href=\"#\">MSAL Angular Demo</a>\r\n      </div>\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a [routerLink]=\"['home']\">Home</a></li>\r\n        <li><a [routerLink]=\"['myCalendar']\">Calendar</a></li>\r\n        <li><a  [routerLink]=\"['todoList']\">Web API Call</a></li>\r\n        <li><a [routerLink]=\"['userData']\">User Data</a></li>\r\n       \r\n      </ul>\r\n      <ul class=\"nav navbar-nav navbar-right\">\r\n        <li><a  *ngIf=\"!loggedIn\"  id=\"loginRedirectButton\"  (click)=\"login()\"><span class=\"glyphicon glyphicon-log-in\"></span> Login Redirect</a></li>\r\n        <li><a id=\"logoutButton\"  *ngIf=\"loggedIn\" (click)=\"logout()\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a></li>\r\n        <li><a  *ngIf=\"!loggedIn\"  id=\"loginPopupButton\"  (click)=\"loginPopup()\"><span class=\"glyphicon glyphicon-log-in\"></span> Login Popup</a></li>\r\n\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n<router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -249,17 +249,11 @@ var AppModule = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return appRoutes; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_component__ = __webpack_require__("./src/app/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__product_component__ = __webpack_require__("./src/app/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__error_component__ = __webpack_require__("./src/app/error.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__product_detail_component__ = __webpack_require__("./src/app/product-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ms_msal_angular__ = __webpack_require__("./node_modules/ms-msal-angular/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__msGraph_component__ = __webpack_require__("./src/app/msGraph.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__todo_list_todo_list_component__ = __webpack_require__("./src/app/todo-list/todo-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__user_data_user_data_component__ = __webpack_require__("./src/app/user-data/user-data.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__config_config_component__ = __webpack_require__("./src/app/config/config.component.ts");
-
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__error_component__ = __webpack_require__("./src/app/error.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__ = __webpack_require__("./node_modules/ms-msal-angular/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__msGraph_component__ = __webpack_require__("./src/app/msGraph.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__todo_list_todo_list_component__ = __webpack_require__("./src/app/todo-list/todo-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__user_data_user_data_component__ = __webpack_require__("./src/app/user-data/user-data.component.ts");
 
 
 
@@ -268,17 +262,11 @@ var AppModule = /** @class */ (function () {
 
 var appRoutes = [
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_0__home_component__["a" /* HomeComponent */] },
-    { path: 'todoList', component: __WEBPACK_IMPORTED_MODULE_6__todo_list_todo_list_component__["a" /* TodoListComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_4_ms_msal_angular__["b" /* MsalGuard */]] },
-    { path: 'product', component: __WEBPACK_IMPORTED_MODULE_1__product_component__["a" /* ProductComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_4_ms_msal_angular__["b" /* MsalGuard */]],
-        children: [
-            { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_3__product_detail_component__["a" /* ProductDetailComponent */] }
-        ]
-    },
-    { path: 'myCalendar', component: __WEBPACK_IMPORTED_MODULE_5__msGraph_component__["a" /* MsGraphComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_4_ms_msal_angular__["b" /* MsalGuard */]] },
-    { path: 'userData', component: __WEBPACK_IMPORTED_MODULE_7__user_data_user_data_component__["a" /* UserDataComponent */] },
-    { path: 'config', component: __WEBPACK_IMPORTED_MODULE_8__config_config_component__["a" /* ConfigComponent */] },
+    { path: 'todoList', component: __WEBPACK_IMPORTED_MODULE_4__todo_list_todo_list_component__["a" /* TodoListComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["b" /* MsalGuard */]] },
+    { path: 'myCalendar', component: __WEBPACK_IMPORTED_MODULE_3__msGraph_component__["a" /* MsGraphComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2_ms_msal_angular__["b" /* MsalGuard */]] },
+    { path: 'userData', component: __WEBPACK_IMPORTED_MODULE_5__user_data_user_data_component__["a" /* UserDataComponent */] },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_2__error_component__["a" /* ErrorComponent */] }
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_1__error_component__["a" /* ErrorComponent */] }
 ];
 //# sourceMappingURL=C:/temp/MSALAngularDemoApp/src/app.routes.js.map
 

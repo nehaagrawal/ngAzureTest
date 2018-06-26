@@ -12,15 +12,9 @@ import {ConfigComponent} from "./config/config.component";
 export const appRoutes: Routes = [
   { path: 'home', component: HomeComponent  },
   { path: 'todoList', component: TodoListComponent , canActivate : [MsalGuard] },
-  { path: 'product', component: ProductComponent,canActivate : [MsalGuard],
-    children: [
-      { path: 'detail/:id', component: ProductDetailComponent  }
-    ]
-   },
   { path: 'myCalendar' ,component: MsGraphComponent, canActivate : [MsalGuard]},
   { path: 'userData' ,component: UserDataComponent},
-  { path: 'config' ,component: ConfigComponent},
-
+ 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: ErrorComponent }
 ];

@@ -6,12 +6,10 @@
       </div>
       <ul class="nav navbar-nav">
         <li><a [routerLink]="['home']">Home</a></li>
-        <li><a [routerLink]="['product']">Product</a></li>
         <li><a [routerLink]="['myCalendar']">Calendar</a></li>
         <li><a  [routerLink]="['todoList']">Web API Call</a></li>
         <li><a [routerLink]="['userData']">User Data</a></li>
-        <li><a [routerLink]="['config']">config settings</a></li>
-
+       
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a  *ngIf="!loggedIn"  id="loginRedirectButton"  (click)="login()"><span class="glyphicon glyphicon-log-in"></span> Login Redirect</a></li>
