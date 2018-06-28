@@ -43,7 +43,8 @@ protectedResourceMap.set("https://buildtodoservice.azurewebsites.net/api/todolis
     RouterModule.forRoot(appRoutes),
     MsalModule.forRoot({
        // clientID: 'f3e5cf63-6c0d-42cb-b5aa-ee58b1ef7523',
-        clientID: '6226576d-37e9-49eb-b201-ec1eeb0029b6',
+      //  clientID: '6226576d-37e9-49eb-b201-ec1eeb0029b6',
+		  clientID: '79d1dd3f-4de3-4b69-ac25-f2fc5eefe773',
        authority: "https://login.microsoftonline.com/msidlab4.onmicrosoft.com/",
         validateAuthority: true,
         redirectUri: "https://msalangularsample.azurewebsites.net/",
