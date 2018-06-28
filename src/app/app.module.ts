@@ -44,7 +44,7 @@ protectedResourceMap.set("https://buildtodoservice.azurewebsites.net/api/todolis
     MsalModule.forRoot({
        // clientID: 'f3e5cf63-6c0d-42cb-b5aa-ee58b1ef7523',
         clientID: '6226576d-37e9-49eb-b201-ec1eeb0029b6',
-       authority: "https://login.microsoftonline.com/neagrawa.onmicrosoft.com/",
+       authority: "https://login.microsoftonline.com/msidlab4.onmicrosoft.com/",
         validateAuthority: true,
         redirectUri: "https://msalangularsample.azurewebsites.net/",
         cacheLocation : "localStorage",
