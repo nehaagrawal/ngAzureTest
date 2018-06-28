@@ -212,8 +212,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_11__app_routes__["a" /* appRoutes */]),
                 __WEBPACK_IMPORTED_MODULE_14_ms_msal_angular__["d" /* MsalModule */].forRoot({
                     // clientID: 'f3e5cf63-6c0d-42cb-b5aa-ee58b1ef7523',
-                    clientID: '6226576d-37e9-49eb-b201-ec1eeb0029b6',
-                    authority: "https://login.microsoftonline.com/neagrawa.onmicrosoft.com/",
+                    //  clientID: '6226576d-37e9-49eb-b201-ec1eeb0029b6',
+                    clientID: '79d1dd3f-4de3-4b69-ac25-f2fc5eefe773',
+                    authority: "https://login.microsoftonline.com/msidlab4.onmicrosoft.com/",
                     validateAuthority: true,
                     redirectUri: "https://msalangularsample.azurewebsites.net/",
                     cacheLocation: "localStorage",
